@@ -1,0 +1,15 @@
+---
+locked_files:
+- bin/
+- bin/*
+- tools/
+- tools/*
+- metadata/
+- metadata/*
+- env/
+- env/OPENSHIFT_JBOSSEAP_DIR
+- env/OPENSHIFT_JBOSSEAP_LOG_DIR
+- env/OPENSHIFT_JBOSSEAP_JDK*
+- env/M2_HOME
+processed_templates:
+- '**/*.erb'

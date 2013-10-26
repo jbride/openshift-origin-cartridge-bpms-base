@@ -1,0 +1,26 @@
+{
+    "localFileSystem":{
+        "deploymentId": "local-playground",
+        "ksession.strategy": "PER_PROCESS_INSTANCE",
+        "repoFolder": "/tmp/bpms/local-playground"
+    },
+    "git":{
+        "deploymentId": "git-playground",
+        "ksession.strategy": "PER_PROCESS_INSTANCE",
+        "remoteGitUrl": "https://github.com/jboss-sso/gpe-playground.git",
+        "repoFolder": "processes/general",
+        "repoAlias": "gpe-playground",
+        "gitUser": "guvnorngtestuser1",
+        "gitPasswd": "test1234",
+        "gitOutDir": "/tmp/bpms/.niogit/gpe-playground.git",
+        "localGitUrl": "git://gpe-playground"
+    },
+    "kjar":{
+        "comment": "no deploymentId.  instead, unique identifier =  <groupId>:<artifactId>:<version>",
+        "ksession.strategy": "PER_PROCESS_INSTANCE",
+        "groupId":  "com.redhat.gpe",
+        "artifactId":  "test-module",
+        "version":  "1.0"
+    }
+
+}
