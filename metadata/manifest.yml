@@ -18,6 +18,9 @@ Website: http://www.jboss.org/jbpm
 Help-Topics:
   "Developer Center": https://www.openshift.com/developers
 Cart-Data:
+  - Key: OPENSHIFT_BPMS_VERSION
+    Type: environment
+    Description: "BPMS version"
   - Key: OPENSHIFT_JBOSSEAP_LOG_DIR
     Type: environment
     Description: "Directory to store application log files."
