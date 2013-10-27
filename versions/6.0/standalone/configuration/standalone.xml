@@ -147,48 +147,6 @@
                         <allow-multiple-users/>
                     </pool>
                 </datasource>
-
-                <!-- JA Bride -->
-                <datasource jndi-name="java:jboss/datasources/jbpm-core-cp"
-                    enabled="${postgresql.enabled}" use-java-context="true" pool-name="jbpm-core-cp"
-                    use-ccm="true">
-                    <connection-url>jdbc:postgresql://${env.OPENSHIFT_POSTGRESQL_DB_HOST}:${env.OPENSHIFT_POSTGRESQL_DB_PORT}/${env.OPENSHIFT_APP_NAME}
-                    </connection-url>
-                    <driver>postgresql</driver>
-                    <security>
-                        <user-name>${env.OPENSHIFT_POSTGRESQL_DB_USERNAME}</user-name>
-                        <password>${env.OPENSHIFT_POSTGRESQL_DB_PASSWORD}</password>
-                    </security>
-                    <validation>
-                        <check-valid-connection-sql>SELECT 1</check-valid-connection-sql>
-                        <background-validation>true</background-validation>
-                    </validation>
-                    <pool>
-                        <flush-strategy>IdleConnections</flush-strategy>
-                        <allow-multiple-users/>
-                    </pool>
-                </datasource>
-
-                <!-- JA Bride -->
-                <datasource jndi-name="java:jboss/datasources/jbpm-bam-cp"
-                    enabled="${postgresql.enabled}" use-java-context="true" pool-name="jbpm-bam-cp"
-                    use-ccm="true">
-                    <connection-url>jdbc:postgresql://${env.OPENSHIFT_POSTGRESQL_DB_HOST}:${env.OPENSHIFT_POSTGRESQL_DB_PORT}/${env.OPENSHIFT_APP_NAME}
-                    </connection-url>
-                    <driver>postgresql</driver>
-                    <security>
-                        <user-name>${env.OPENSHIFT_POSTGRESQL_DB_USERNAME}</user-name>
-                        <password>${env.OPENSHIFT_POSTGRESQL_DB_PASSWORD}</password>
-                    </security>
-                    <validation>
-                        <check-valid-connection-sql>SELECT 1</check-valid-connection-sql>
-                        <background-validation>true</background-validation>
-                    </validation>
-                    <pool>
-                        <flush-strategy>IdleConnections</flush-strategy>
-                        <allow-multiple-users/>
-                    </pool>
-                </datasource>
                 <drivers>
                     <driver name="h2" module="com.h2database.h2">
                         <xa-datasource-class>org.h2.jdbcx.JdbcDataSource
