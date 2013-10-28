@@ -36,26 +36,6 @@
     
     <system-properties>
        <property name="org.apache.coyote.http11.Http11Protocol.COMPRESSION" value="on"/>
-
-        <!-- JA Bride -->
-        <property name="hibernate.hbm2ddl.auto" value="create" />
-        <property name="hibernate.cache.use_second_level_cache" value="false" />
-        <property name="hibernate.show_sql" value="false" />
-
-        <property name="org.jboss.processFlow.diagnostics.logBeforeBeanDiscovery" value="false" />
-        <property name="org.jboss.processFlow.diagnostics.logProcessAnnotatedType" value="false" />
-        <property name="org.jboss.processFlow.diagnostics.logAfterBeanDiscovery" value="false" />
-        <property name="org.jboss.processFlow.diagnostics.logProcessInjectionTarget" value="false" />
-        <property name="org.jboss.processFlow.diagnostics.logProcessProducer" value="false" />
-        <property name="org.jboss.processFlow.diagnostics.logAfterDeploymentValidation" value="false" />
-        <property name="org.jboss.processFlow.diagnostics.logBeforeShutdown" value="false" />
-        <property name="org.jboss.processFlow.diagnostics.logProcessBean" value="false" />
-
-        <property name="org.jboss.processFlow.cdi.space.delimited.veto.classes" value="org.jbpm.shared.services.impl.events.JbpmServicesEventImpl org.jbpm.shared.services.impl.tx.CMTBTMTransaction org.jbpm.kie.services.impl.form.FormProviderServiceImpl" />
-        <property name="org.jboss.processFlow.deployments.json.config.path" value="${env.OPENSHIFT_DATA_DIR}deployments/kie.deployments.json" />
-        <property name="org.kie.nio.git.deamon.enabled" value="false" />
-        <property name="org.apache.cxf.stax.allowInsecureParser" value="true" />
-        <property name="jbpm.audit.jms.enabled" value="false" />
     </system-properties>
 
     <!-- JA Bride -->

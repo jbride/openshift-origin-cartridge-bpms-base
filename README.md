@@ -11,7 +11,7 @@ OVERVIEW
 
 ACKNOWLEDGMENTS
 ---------------
-  - many thanks to both the OpenShift and jbpm communities as well as Red Hat's Global Partner Enablement team for sponsoring this effort.
+  - many thanks to both the OpenShift and BPMS communities as well as Red Hat's Global Partner Enablement team for sponsoring this effort.
 
 
 PURPOSE
@@ -41,8 +41,14 @@ FEATURES
 GETTING STARTED
 ---------------
   - provision an OSE 1.2 on-premise environment or create an OpenShift Online account
-  - rhc create-app jbpmengine "http://cartreflect-claytondev.rhcloud.com/reflect?github=jbride/openshift-origin-cartridge-jbpm-engine&commit=master"
-  - rhc cartridge add -a jbpmengine -c postgresql-8.4
+
+  - rhc app delete -a bpmsbase
+  - rhc create-app bpmsbase "http://cartreflect-claytondev.rhcloud.com/reflect?github=jbride/openshift-origin-cartridge-bpms-base&commit=master"
+
+  - execution server
+    - rhc add-cartridge -a bpmsbase -c mysql-5.1
+    - rhc add-cartridge -a bpmsbase "http://cartreflect-claytondev.rhcloud.com/reflect?github=jbride/openshift-addon-bpms-execution-server&commit=master" 
+
   - bounce the app
     - note:  i currently have a bug when using:  rhc app restart -a jbpmengine.  Subsequently, bounce the app as follows:
       - ssh into gear
@@ -58,6 +64,7 @@ GETTING STARTED
 
      - start 'Minimal' process
         - curl -v -X POST http://my_openshift_app_ip/kie-jbpm-services/rest/runtime/general/process/Minimal/start
+
             
     
 TODO
