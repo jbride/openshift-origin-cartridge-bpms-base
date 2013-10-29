@@ -14,6 +14,3 @@ cp ${OPENSHIFT_JBOSSEAP_DIR}/versions/${version}/bin/* ${OPENSHIFT_JBOSSEAP_DIR}
 
 # Initialize the JBoss CLI history file
 [ -f ${OPENSHIFT_HOMEDIR}/.jboss-cli-history ] || touch ${OPENSHIFT_HOMEDIR}/.jboss-cli-history
-
-# JA Bride:  can not unzip bpms.deployer.zip in app-root/data dir due to following from node mcollective:  
-#       caution: filename not matched:  /var/lib/openshift/51e5e4c83d17e4c2d90000ad//app-root/data/

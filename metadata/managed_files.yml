@@ -10,6 +10,6 @@ locked_files:
 - env/OPENSHIFT_JBOSSEAP_DIR
 - env/OPENSHIFT_JBOSSEAP_LOG_DIR
 - env/OPENSHIFT_JBOSSEAP_JDK*
-- env/M2_HOME
+- env/OPENSHIFT_BPMS_VERSION
 processed_templates:
 - '**/*.erb'
