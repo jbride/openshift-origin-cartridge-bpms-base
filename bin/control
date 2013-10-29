@@ -271,6 +271,12 @@ function deploy() {
   fi
 }
 
+function copy_conf() {
+    # copy any project CLI files to filtered directory
+    mkdir -p ${OPENSHIFT_JBOSSEAP_DIR}/filtered
+    cp ${OPENSHIFT_JBOSSEAP_DIR}/versions/${version}/conf/* ${OPENSHIFT_JBOSSEAP_DIR}/filtered
+}
+
 function start() {
   if marker_present "enable_jpda"; then
     export ENABLE_JPDA=1
@@ -293,6 +299,10 @@ function start() {
 
     waitondeployments
   fi
+
+  # JA Bride
+  copy_conf
+  $OPENSHIFT_JBOSSEAP_DIR/bin/tools/jboss-cli.sh --connect --controller=$OPENSHIFT_JBOSSEAP_IP:$OPENSHIFT_JBOSSEAP_MANAGEMENT_NATIVE_PORT -c --file=$OPENSHIFT_JBOSS_DIR/filtered/bpmsbase-project.cli
 }
 
 
