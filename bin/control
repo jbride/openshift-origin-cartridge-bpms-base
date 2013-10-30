@@ -275,7 +275,7 @@ function deploy() {
 function copy_conf() {
     # copy any project CLI files to filtered directory
     mkdir -p ${OPENSHIFT_JBOSSEAP_DIR}/filtered
-    #cp ${OPENSHIFT_JBOSSEAP_DIR}/versions/${version}/conf/* ${OPENSHIFT_JBOSSEAP_DIR}/filtered
+    cp ${OPENSHIFT_JBOSSEAP_DIR}/versions/${version}/conf/* ${OPENSHIFT_JBOSSEAP_DIR}/filtered
 }
 
 function start() {

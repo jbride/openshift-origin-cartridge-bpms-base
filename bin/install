@@ -10,6 +10,8 @@ esac
 bpms_version=6.0.0.CR5
 
 echo "$version" > "$OPENSHIFT_JBOSSEAP_DIR/env/OPENSHIFT_JBOSSEAP_VERSION"
+
+# JA Bride
 echo "$bpms_version" > "$OPENSHIFT_JBOSSEAP_DIR/env/OPENSHIFT_BPMS_VERSION"
 
 ln -s ${OPENSHIFT_JBOSSEAP_DIR}/standalone/log ${OPENSHIFT_JBOSSEAP_DIR}/logs
@@ -37,5 +39,6 @@ touch ${OPENSHIFT_JBOSSEAP_DIR}/env/OPENSHIFT_JBOSSEAP_CLUSTER_REMOTING
 
 update-configuration java7
 
+# JA Bride
 # unzip bpms6 modules into $OPENSHIFT_DATA_DIR
 unzip versions/${version}/modules/kie-eap-integration-${bpms_version}-eap-bpms-static-modules.zip -d ${OPENSHIFT_DATA_DIR}
