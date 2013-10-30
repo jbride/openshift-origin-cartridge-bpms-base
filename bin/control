@@ -10,6 +10,7 @@ SCANCONFIG=""
 source $JBOSSEAP_BIN_DIR/util
 
 cartridge_type="jbosseap"
+version=6.0
 
 # Return the deployment-scanner configuration
 function getscanconfig() {
