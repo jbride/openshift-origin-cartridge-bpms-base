@@ -1,4 +1,4 @@
-rhc app delete -a bpmsbase
+    - rhc app delete -a bpmsbase
     - rhc create-app bpmsbase "http://cartreflect-claytondev.rhcloud.com/reflect?github=jbride/openshift-origin-cartridge-bpms-base&commit=master"
 
   - install 'add-on' cartridges
@@ -11,25 +11,29 @@ rhc app delete -a bpmsbase
     - bpms execution server
         - rhc add-cartridge -a bpmsbase "http://cartreflect-claytondev.rhcloud.com/reflect?github=jbride/openshift-addon-bpms-execution-server&commit=master" 
 
+    - bpms business central
+        - rhc add-cartridge -a bpmsbase "http://cartreflect-claytondev.rhcloud.com/reflect?github=jbride/openshift-addon-bpms-biz-central&commit=master" 
 
 
 
-  - test
-     - there is currently a single KIE deployment at the following directory: $OPENSHIFT_DATA_DIR/runtime/deployments/general
-     - that KIE deployment has two test process definitions:
-           - BPMN2-MinimalProcess.bpmn2
-           - BPMN2-UserTask.bpmn2
-     - view existing processes:
-        - curl -v -X GET http://my_openshift_app_ip/kie-jbpm-services/rest/additional/runtime/general/processes
-
-     - start 'Minimal' process
-        - curl -v -X POST http://my_openshift_app_ip/kie-jbpm-services/rest/runtime/general/process/Minimal/start
-
-  
-OTHER ADMINISTRATION          
+GENERAL ADMINISTRATION          
 --------------------
   - bounce the app
-    - rhc app restart -a bpmsbase
+    (executed from OS that has rhc client tools installed):   rhc app restart -a bpmsbase
+
+  - tail the jbosseap log file
+    - ssh into bpmsbase gear
+    - tail -f bpmsbase/standalone/log/server.log
+
+
+TEST
+--------------------
+    - there is currently various deployment units managed by the execution server as per:  exserver/filtered/kie.deployments.json
+    - view list of REST API functions useful for trouble-shooting execution server:
+        from root directory of gear:   ./exserver/bin/control printExServerRestCalls
+
+  
+    
     
 TODO
 ----
