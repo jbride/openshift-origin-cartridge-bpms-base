@@ -1,0 +1,12 @@
+bpmPaaS
+=======
+:data-uri:
+
+image::images/title.png[width=1024]
+
+include::overview.txt[]
+include::dArch.txt[]
+include::valueAdd.txt[]
+include::devEnvironment.txt[]
+include::nextSteps.txt[]
+

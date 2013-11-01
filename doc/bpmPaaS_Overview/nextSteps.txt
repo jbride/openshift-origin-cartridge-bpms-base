@@ -1,0 +1,6 @@
+== Next Steps
+
+. Submit BZs and pull-requests to BPMS6 engineering team
+. Provision BLD6 Workshop labs in Red Hat IT OSE using bpmPaaS cartridges
+. Upgrade cartridges to OSE 2.0  ( ~ Jan. 2014 )
+. Red Hat Support possibilities ?

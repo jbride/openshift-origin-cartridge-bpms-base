@@ -1,0 +1,6 @@
+== bpmPaaS Deployment Architecture
+
+image::images/bpms6-deployment-architecture-openshift.png[width=900]
+
+ifdef::showScript[]
+endif::showScript[]

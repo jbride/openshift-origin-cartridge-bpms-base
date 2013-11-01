@@ -1,4 +1,14 @@
-    - rhc app delete -a bpmsbase
+bpmPaaS Cartridges using BPMS6
+==============================
+
+Overview
+--------
+  - Provisions scalable BPM application tier in Openshift
+  - Allows for flexible deployment architecture to include an on-premise production environment
+  - This cartridge is essentially a fork of Bill Decoste's jbosseap cartridge.
+  - Subsequently, most of administration guidelines documented in the jbosseap cartridge apply to this cartridge.
+  
+  - rhc app delete -a bpmsbase
     - rhc create-app bpmsbase "http://cartreflect-claytondev.rhcloud.com/reflect?github=jbride/openshift-origin-cartridge-bpms-base&commit=master"
 
   - install 'add-on' cartridges

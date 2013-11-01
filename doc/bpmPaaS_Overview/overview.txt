@@ -1,0 +1,14 @@
+== Red Hat BPMS 6 in the Cloud
+
+* Red Hat Business Process Management Suite v6 Beta released:  31 Oct 13
+* Optimized for cloud environments:
+** Process and task engines are stateless:  easy to scale elastically
+** Process and task engines are exposed via REST API
+** Persistence of process, task and audit trail data is plug-gable
+*** cloud enabled RDBMS like mysql & postgresql is default
+*** JBoss Data Grid and MongoDB are interesting possibilities
+** Flexible deployment architectures
+
+
+ifdef::showScript[]
+endif::showScript[]

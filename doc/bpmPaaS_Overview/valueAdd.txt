@@ -1,0 +1,7 @@
+== Value of bpmPaaS to Red Hat Partners
+* On-premise production environments
+* Public and on-premise dev / test environments 
+* Training via Red Hat GPE's BLD6 Workshop  
+
+ifdef::showScript[]
+endif::showScript[]
