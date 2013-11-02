@@ -3,4 +3,22 @@
 image::images/example-bpmPaaS-development-environment.png[width=1024]
 
 ifdef::showScript[]
+
+* we've discussed the existence of a series of bpm base and add-on cartridges
+
+* for those that might be interested in creating cartridge themselves for any functionality, might be wondering at this point how to even get started:
+
+* recommend a local, controlled OSE 1.2 environment that is light-weight and reproducible
+** local
+*** root causes of most errors encountered during OSE dev don't get propogated up to the RHC client 
+*** instead, tail mcollective.log on target node to view root causes
+*** mcollective.log is not viewable by users of Openshift Online
+** reproducible
+*** allow for lots of mistakes and ability roll-back to known working snapshots
+
+* rhelRepo
+** bring it up every couple of weeks
+** using reposync, pull down latest packages from rhel6, ose and jboss channels
+** now that latest packages are local:  can quickly update my existing OSE development nodes or provision new OSE dev environments entirely
+
 endif::showScript[]

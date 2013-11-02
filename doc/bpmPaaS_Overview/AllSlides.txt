@@ -10,3 +10,13 @@ include::valueAdd.txt[]
 include::devEnvironment.txt[]
 include::nextSteps.txt[]
 
+
+ifdef::showScript[]
+
+* personal intro
+
+* bpmPaaS at Red Hat
+** implementation is an initiative spearheaded by the GPE team
+** coordinating with product mngmt and engineering with both BPMS and OSE
+
+endif::showScript[]

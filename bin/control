@@ -7,6 +7,9 @@ JBOSSEAP_PID_FILE=${OPENSHIFT_HOMEDIR}/app-root/runtime/jbosseap.pid
 JBOSSEAP_DEPLOYMENTS_DIR=${OPENSHIFT_JBOSSEAP_DIR}/standalone/deployments
 SCANCONFIG=""
 
+# JA Bride
+originalCartDeployDir=$OPENSHIFT_JBOSSEAP_DIR/versions/6.0/deployments
+
 source $JBOSSEAP_BIN_DIR/util
 
 cartridge_type="jbosseap"
@@ -304,6 +307,8 @@ function start() {
   # JA Bride
   copy_conf
   $OPENSHIFT_JBOSSEAP_DIR/bin/tools/jboss-cli.sh --connect --controller=$OPENSHIFT_JBOSSEAP_IP:$OPENSHIFT_JBOSSEAP_MANAGEMENT_NATIVE_PORT -c --file=$OPENSHIFT_JBOSSEAP_DIR/filtered/bpmsbase-project.cli
+
+    ln -s $originalCartDeployDir/bpmsCartWelcome.war $JBOSSEAP_DEPLOYMENTS_DIR
 }
 
 

@@ -3,4 +3,22 @@
 image::images/bpms6-deployment-architecture-openshift.png[width=900]
 
 ifdef::showScript[]
+
+* 4 OSE apps :  make up 4 major subcomponents of BPMS 6
+** looks significantly different than OOB BPMS6 standalone
+
+* custom tuning configuration of each app
+** horizontal scalability of execution server tier
+** different gear sizes assigned to the various apps
+
+** base and add-on cartridges
+*** 6 cartridges:
+. openshift-origin-cartridge-bpms-base
+. openshift-addon-bpms-execution-server
+. openshift-addon-bpms-ha
+. mysql-5.1
+. openshift-addon-bpms-biz-central
+. openshift-addon-bpms-dashboard
+*** all cartridges are pushed to github
+
 endif::showScript[]
