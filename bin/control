@@ -309,6 +309,7 @@ function start() {
   $OPENSHIFT_JBOSSEAP_DIR/bin/tools/jboss-cli.sh --connect --controller=$OPENSHIFT_JBOSSEAP_IP:$OPENSHIFT_JBOSSEAP_MANAGEMENT_NATIVE_PORT -c --file=$OPENSHIFT_JBOSSEAP_DIR/filtered/bpmsbase-project.cli
 
     ln -s $originalCartDeployDir/bpmsCartWelcome.war $JBOSSEAP_DEPLOYMENTS_DIR
+    echo > $JBOSSEAP_DEPLOYMENTS_DIR/bpmsCartWelcome.war.dodeploy
 }
 
 
