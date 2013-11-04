@@ -50,9 +50,10 @@ GENERAL ADMINISTRATION
 
 TEST
 --------------------
-    - there is currently various deployment units managed by the execution server as per:  exserver/filtered/kie.deployments.json
-    - view list of REST API functions useful for trouble-shooting execution server:
-        from root directory of gear:   ./exserver/bin/control printExServerRestCalls
+* There are currently various deployment units managed by the execution server as per:  exserver/filtered/kie.deployments.json
+* View list of REST API functions useful for trouble-shooting execution server
+
+    - from root directory of gear:   ./exserver/bin/control printExServerRestCalls
 
   
     
