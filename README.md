@@ -2,27 +2,34 @@ bpmPaaS Cartridges using BPMS6
 ==============================
 
 Overview
---------
-  - Provisions scalable BPM application tier in Openshift
-  - Allows for flexible deployment architecture to include an on-premise production environment
-  - This cartridge is essentially a fork of Bill Decoste's jbosseap cartridge.
-  - Subsequently, most of administration guidelines documented in the jbosseap cartridge apply to this cartridge.
-  
-  - rhc app delete -a bpmsbase
-    - rhc create-app bpmsbase "http://cartreflect-claytondev.rhcloud.com/reflect?github=jbride/openshift-origin-cartridge-bpms-base&commit=master"
+------------------
+* Provisions scalable BPM application tier in Openshift
+* Allows for flexible deployment architecture to include an on-premise production environment as per this diagram:  https://raw.github.com/jbride/openshift-origin-cartridge-bpms-base/master/doc/bpmPaaS_Overview/images/bpms6-deployment-architecture-openshift.png
+* NOTE:  this cartridge differs from the "standalone" BPMS cartridge that packs all functionality into a single gear as per this diagram:  https://raw.github.com/jbride/openshift-origin-cartridge-bpms-full/master/doc/images/bpmPaaS-standalone-deployment-architecture.png
+*This cartridge is essentially a fork of Bill Decoste's jbosseap cartridge.
+  Subsequently, most of administration guidelines documented in the jbosseap cartridge apply to this cartridge.
 
-  - install 'add-on' cartridges
+
+INITIAL SETUP
+-----------------
+1.  Create an OSE 1.2 environment that can support a mix of small and medium gear sizes
+2.  Install OSE 1.2 rhc tools
+3.  Delete any previous bpms6 related OSE applications that you may have previously created:  
+        rhc app delete -a bpms
+4.  Create the initial BPMS6 *base* OSE application:
+        rhc create-app bpms "http://cartreflect-claytondev.rhcloud.com/reflect?github=jbride/openshift-origin-cartridge-bpms-base&commit=master"
+5.  Install 'add-on' cartridges
     
-    - mysql cartridge :     rhc add-cartridge -a bpmsbase -c mysql-5.1
+    - mysql cartridge :     rhc add-cartridge -a bpms -c mysql-5.1
 
     - bpms high-availability server
-        - rhc add-cartridge -a bpmsbase "http://cartreflect-claytondev.rhcloud.com/github/jbride/openshift-addon-bpms-ha"
+        - rhc add-cartridge -a bpms "http://cartreflect-claytondev.rhcloud.com/github/jbride/openshift-addon-bpms-ha"
 
     - bpms execution server
-        - rhc add-cartridge -a bpmsbase "http://cartreflect-claytondev.rhcloud.com/reflect?github=jbride/openshift-addon-bpms-execution-server&commit=master" 
+        - rhc add-cartridge -a bpms "http://cartreflect-claytondev.rhcloud.com/reflect?github=jbride/openshift-addon-bpms-execution-server&commit=master" 
 
     - bpms business central
-        - rhc add-cartridge -a bpmsbase "http://cartreflect-claytondev.rhcloud.com/reflect?github=jbride/openshift-addon-bpms-biz-central&commit=master" 
+        - rhc add-cartridge -a bpms "http://cartreflect-claytondev.rhcloud.com/reflect?github=jbride/openshift-addon-bpms-biz-central&commit=master" 
 
 
 
