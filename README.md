@@ -15,10 +15,12 @@ INITIAL SETUP
 1.  Create an OSE 1.2 environment that can support a mix of small and medium gear sizes
 2.  Install OSE 1.2 rhc tools
 
-3.  Delete any previous bpms6 related OSE applications that you may have previously created:  
+3.  Delete any previous bpms6 related OSE applications that you may have previously created
+
         - rhc app delete -a bpms
 
-4.  Create the initial BPMS6 *base* OSE application:
+4.  Create the initial BPMS6 *base* OSE application
+
         - rhc create-app bpms "http://cartreflect-claytondev.rhcloud.com/reflect?github=jbride/openshift-origin-cartridge-bpms-base&commit=master"
 
 5.  Install 'add-on' cartridges
