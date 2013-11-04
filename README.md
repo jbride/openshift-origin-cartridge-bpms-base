@@ -4,10 +4,15 @@ bpmPaaS Cartridges using BPMS6
 Overview
 ------------------
 * Provisions scalable BPM application tier in Openshift
-* Allows for flexible deployment architecture to include an on-premise production environment as per this diagram:  https://raw.github.com/jbride/openshift-origin-cartridge-bpms-base/master/doc/bpmPaaS_Overview/images/bpms6-deployment-architecture-openshift.png
-* NOTE:  this cartridge differs from the "standalone" BPMS cartridge that packs all functionality into a single gear as per this diagram:  https://raw.github.com/jbride/openshift-origin-cartridge-bpms-full/master/doc/images/bpmPaaS-standalone-deployment-architecture.png
-*This cartridge is essentially a fork of Bill Decoste's jbosseap cartridge.
-  Subsequently, most of administration guidelines documented in the jbosseap cartridge apply to this cartridge.
+* Allows for flexible deployment architecture to include an on-premise production environment as per this diagram
+
+    - https://raw.github.com/jbride/openshift-origin-cartridge-bpms-base/master/doc/bpmPaaS_Overview/images/bpms6-deployment-architecture-openshift.png
+
+* NOTE:  this cartridge differs from the "standalone" BPMS cartridge that packs all functionality into a single gear as per this diagram
+
+    - https://raw.github.com/jbride/openshift-origin-cartridge-bpms-full/master/doc/images/bpmPaaS-standalone-deployment-architecture.png
+
+*This cartridge is essentially a fork of Bill Decoste's jbosseap cartridge.  Subsequently, most of administration guidelines documented in the jbosseap cartridge apply to this cartridge.
 
 
 INITIAL SETUP
