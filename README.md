@@ -66,10 +66,9 @@ TEST
 TODO
 ----
   - Openshift related
-    - package BPMS6 modules as RPMs ??
-        - currently the size of the modules is 13 MB and is found in this cartridge at:   versions/6.0/modules/bpms.deployer.zip
     - allow for database dependency in cartridge
         - https://www.openshift.com/content/allow-for-database-dependency-in-cartridge
+    - migrate to OSE 2.0 cartridge format
 
   - BPMS6 related
 
@@ -80,4 +79,7 @@ TODO
     - split bpms 'core' and 'bam' JPA persistence units
 
     - implement alternative CDI Task, and KnowledgeSession entry points for biz central and dashboard web archives that use REST API from Execution Server
+
+    - package BPMS6 modules as RPMs
+        - https://bugzilla.redhat.com/show_bug.cgi?id=1005381
 
