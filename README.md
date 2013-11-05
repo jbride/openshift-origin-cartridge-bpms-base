@@ -78,7 +78,14 @@ TODO
 
     - split bpms 'core' and 'bam' JPA persistence units
 
-    - implement alternative CDI Task, and KnowledgeSession entry points for biz central and dashboard web archives that use REST API from Execution Server
+    - update KnowledgeSession Entry Point API in biz-central to accept deployment ID ?
+        - would avoid upfront look-up to identify deploymentId from processInstanceId (mapping contained in ProcessInstanceLog table)
+
+    - implement alternative Task, and KnowledgeSession entry point implementations for biz central and dashboard web archives that use REST API from Execution Server
+        - update B Tison's work to latest master branch and submit pull-request 
+
+    - REST API enhancements
+        - update B Tison's work to latest master branch and submit pull-request 
 
     - package BPMS6 modules as RPMs
         - https://bugzilla.redhat.com/show_bug.cgi?id=1005381
