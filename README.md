@@ -83,3 +83,5 @@ TODO
     - package BPMS6 modules as RPMs
         - https://bugzilla.redhat.com/show_bug.cgi?id=1005381
 
+    - github home for these BPMS OSE cartridges ??
+
