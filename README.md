@@ -71,18 +71,13 @@ TODO
     - allow for database dependency in cartridge
         - https://www.openshift.com/content/allow-for-database-dependency-in-cartridge
 
-  - JBPM related
-    - modules
-        - deprecate existing modules in favor of official BPMS6 modules as described here:  https://bugzilla.redhat.com/show_bug.cgi?id=993126
+  - BPMS6 related
 
     - DeploymentService strategy
-        - currently using VFS DeploymentService backed by org.kie.commons.java.nio.fs.file.SimpleFileSystemProvider
-        - should this cartridge continue to use VFS DeploymentService and switch to org.kie.commons.java.nio.fs.jgit.JGitFileSystemProvider ??
-        - and / or
-        - should this cartridge use a KModuleDeployment strategy where kjars are in a remote maven repo ??
-            - could inter-operate with a different gear provisioned with guvnor-cartridge ?
+        - currently using PFP specific:  kie.deployments.json
+        - migrate to whatever comes from: https://bugzilla.redhat.com/show_bug.cgi?id=1017327
 
-    - audit logging
-        - inject JMS AuditLogger from org.jbpm.process.audit.AuditLoggerFactory into kieSession
-        - send process events to remote centralized JMS broker
+    - split bpms 'core' and 'bam' JPA persistence units
+
+    - implement alternative CDI Task, and KnowledgeSession entry points for biz central and dashboard web archives that use REST API from Execution Server
 
